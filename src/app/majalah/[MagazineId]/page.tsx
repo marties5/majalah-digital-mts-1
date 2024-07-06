@@ -1,9 +1,9 @@
+"use client";
 import images from "@/../public/images/Letter.webp";
-import { Typography } from "@/components/Atoms/Typography";
-import { BreakingNews } from "@/components/page/section/BreakingNews";
 import { BookSectionWrapper } from "@/components/page/section/Magazine";
+import { useParams } from "next/navigation";
 
-export default function Home() {
+const MagazineDetails = () => {
   const bookSections = {
     id: 2,
     magazine_name: "Majalah Idea edisi 30",
@@ -26,16 +26,12 @@ export default function Home() {
     tanggal_terbit: "20/05/2024",
   };
 
+  const { MagazineId } = useParams();
   return (
-    <main className="h-fit px-4 md:px-0">
-      <BreakingNews />
-      <Typography
-        variant="title"
-        className="md:my-4 my-1 text-start w-full text-lg"
-      >
-        Majalah Digital
-      </Typography>
+    <div className="max-md:px-8 py-8">
       <BookSectionWrapper magazine_data={bookSections} />
-    </main>
+    </div>
   );
-}
+};
+
+export default MagazineDetails;

@@ -14,13 +14,13 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next"
+        "name": "next"  
       }
     ],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/f/pages.js", "src/app/Custom404.tsx"],
   "exclude": ["node_modules"]
 }
